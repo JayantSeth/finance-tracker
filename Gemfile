@@ -22,6 +22,13 @@ gem 'jbuilder', '~> 2.7'
 
 # for Authentication
 gem 'devise'
+
+# for authentication bootstrap 
+gem 'devise-bootstrap-views', '~> 1.0'
+
+# for getting stock price data
+gem 'iex-ruby-client'
+
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
