@@ -12,13 +12,14 @@
       <td><strong>Email: </strong> <%= friend.email %></td>
       <td><strong>First name: </strong> <%= friend.first_name %></td>
       <td><strong>Last name: </strong> <%= friend.last_name %></td>
+      <td>
+      <strong>Actions: </strong> <%= link_to "View Profile", "#", class: "btn btn-sm btn-success" %>
       <% if current_user.can_follow_friend?(friend.id) %>
-      <td><strong>Actions: </strong> <%= link_to "View Profile", "#", class: "btn btn-sm btn-success" %>
         <%= link_to 'Follow', friendships_path(friend_id: friend.id), 
                                       class: "btn btn-xs btn-success", method: :post %> 
       <% else %> 
         <span class="badge badge-secondary"> 
-          You are already following <%= friend.email %>
+          You are friends
         </span>
       </td>
       <% end %>
